@@ -7,32 +7,38 @@ import {
   StyleDescription,
   StyledImage,
 } from "../styles";
+import { motion } from "framer-motion";
+import { titleAnimation, fadeAnimation, photoAnimation } from "../animation";
 
 const AboutSection = () => {
   return (
     <StyledAbout>
       <StyleDescription>
-        <div className="title">
+        <motion.div>
           <StyledHide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>
+            <motion.h2 variants={titleAnimation}>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>true.</h2>
+            <motion.h2 variants={titleAnimation}>true.</motion.h2>
           </StyledHide>
-        </div>
-        <p>
+        </motion.div>
+        <motion.p variants={fadeAnimation}>
           Contact us for any photography or videography ideas that you have. We
           have professionals with great skills .
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fadeAnimation}>Contact Us</motion.button>
       </StyleDescription>
       <StyledImage>
-        <img src={home1} alt="Guy with a camera." />
+        <motion.img
+          variants={photoAnimation}
+          src={home1}
+          alt="Guy with a camera."
+        />
       </StyledImage>
     </StyledAbout>
   );
