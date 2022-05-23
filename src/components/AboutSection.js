@@ -1,5 +1,6 @@
 import React from "react";
 import home1 from "../img/home1.png";
+import Wave from "./Wave";
 
 import {
   StyledHide,
@@ -40,6 +41,7 @@ const AboutSection = () => {
           alt="Guy with a camera."
         />
       </StyledImage>
+      <Wave />
     </StyledAbout>
   );
 };
